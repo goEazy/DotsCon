@@ -123,6 +123,7 @@ public class DotCon extends javax.swing.JFrame implements MouseListener
             {
                 jLabel8.setText(player2.getText() + "  WON");
             }
+            gamePlay = false;
         }
     }
     private void newGame()
@@ -150,9 +151,12 @@ public class DotCon extends javax.swing.JFrame implements MouseListener
                 count++;
             }
         }
+        dots.setBounds(29, 20, 520, 510);
         score1.setText("0");
         score2.setText("0");
-        jLabel8.setVisible(false);
+        jLabel8.setText("");
+        sc1 = 0;
+        sc2 = 0;
         change = true;
     }
     private void initComponents() 
@@ -227,7 +231,7 @@ public class DotCon extends javax.swing.JFrame implements MouseListener
         player1.setVisible(false);
         player1.setOpaque(true);
         jPanel1.add(player1);
-        player1.setBounds(730, 250, 50, 30);
+        player1.setBounds(730, 250, 80, 30);
         
         player2.setFont(new java.awt.Font("Vrinda", 1, 14)); // NOI18N
         
@@ -237,7 +241,7 @@ public class DotCon extends javax.swing.JFrame implements MouseListener
         player2.setOpaque(true);
         player2.setBackground(Color.white);
         jPanel1.add(player2);
-        player2.setBounds(730, 320, 50, 30);
+        player2.setBounds(730, 320, 80, 30);
 
         score2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         score2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
